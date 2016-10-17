@@ -44,9 +44,8 @@ class Engine(subprocess.Popen):
             "SyzygyProbeLimit": 6
         }
 
-
     """
-    def __init__(self, engine_path="", depth=12, param=None):
+    def __init__(self, engine_path="C:\\Users\\Dani\\Envs\\stockfish-python\\stockfishEngine\\stockfish-7-win\\Windows\\stockfish.exe", depth=12, param={}):
         subprocess.Popen.__init__(self, engine_path, universal_newlines=True,
                                   stdin=subprocess.PIPE,
                                   stdout=subprocess.PIPE)
@@ -102,13 +101,11 @@ class Engine(subprocess.Popen):
 
     def setposition(self, position):
         """
-
         The move format is in long algebraic notation.
 
         Takes list of stirngs = ['e2e4', 'd7d5']
         OR
         FEN = 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
-
         """
         try:
             if isinstance(position, list):
@@ -149,5 +146,5 @@ class Engine(subprocess.Popen):
                     ponder = line[3]
                 else:
                     ponder = None
-                return {'move': line[1], 'ponder': ponder, 'info': info}
+                return {'bestmove': line[1], 'ponder': ponder, 'info': ' '.join(info)}
             info = line
