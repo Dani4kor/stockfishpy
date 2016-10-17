@@ -21,7 +21,7 @@ Python console Example
 
 .. code:: python
 
-    >>> from stockfishpy import *
+    >>> from stockfishpy.stockfishpy import *
     >>> chessEngine = Engine(STOCKFISH_PATH, param={'Threads': 2, 'Ponder': 'true'})
     >>> print chessEngine.uci()
     uciok
