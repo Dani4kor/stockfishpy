@@ -99,7 +99,7 @@ def find_package_data(
 PACKAGE = "stockfish"
 NAME = "stockfishpython"
 DESCRIPTION = "Simple python Stockfish wrapper"
-AUTHOR = "dani4ko"
+AUTHOR = "dani4kor"
 AUTHOR_EMAIL = "dani4kor@gmail.com"
 URL = "https://github.com/Dani4kor/Stockfish-python"
 VERSION = __import__(PACKAGE).__version__
