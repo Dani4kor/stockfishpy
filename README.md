@@ -6,14 +6,13 @@ Python Stockfish UCI Chess Engine wrapper
 
 ---------
 ## SETUP:
----------
 * Python 2.7
 * [Download](http://www.stockfishchess.com/) and make 'Stockfish' executable
 
 
 ------
 ## USAGE:
-------
+
 Python console Example
 ```python
 >>> from stockfishpy import *
@@ -48,7 +47,7 @@ b8c6
 
 -----
 ## TEST:
------
+
 ```
 execute stockfishtest.py
 ```
