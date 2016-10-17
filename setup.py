@@ -101,7 +101,7 @@ NAME = "stockfishpy"
 DESCRIPTION = "Simple python Stockfish wrapper"
 AUTHOR = "dani4kor"
 AUTHOR_EMAIL = "dani4kor@gmail.com"
-URL = "https://github.com/Dani4kor/Stockfish-python"
+URL = "https://github.com/Dani4kor/stockfishpy"
 VERSION = __import__(PACKAGE).__version__
 
 
