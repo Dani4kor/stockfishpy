@@ -5,9 +5,10 @@ Python Stockfish UCI Chess Engine wrapper
 
 
 ---------
-## SETUP:
+## Getting Started:
 * Python 2.7
 * [Download](http://www.stockfishchess.com/) and make 'Stockfish' executable
+* Setup stockfish PATH in stockfishpy.py
 
 
 ------
@@ -46,8 +47,12 @@ b8c6
 
 
 -----
-## TEST:
+## Tests:
 
-```
-execute stockfishtest.py
-```
+* Setup stockfish PATH in stockfishpy.py
+* Execute stockfishtest.py
+
+
+---------
+## License:
+This project is licensed under the GNU v3 see the LICENSE file for details
