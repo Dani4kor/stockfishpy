@@ -1,8 +1,7 @@
-------------
-## Stockfishpy
-------------
+# Stockfishpy
 
-Simple python Stockfish UCI Chess Engine wrapper
+Python Stockfish UCI Chess Engine wrapper
+
 
 
 ---------
@@ -28,7 +27,7 @@ readyok
 >>> chessEngine.ucinewgame()
 >>> chessEngine.setposition('rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1')
 >>> move = chessEngine.bestmove()
->>> print move['move']
+>>> print move['bestmove']
 e7e5
 
 >>> print move['ponder']
@@ -41,7 +40,7 @@ info depth 12 seldepth 16 multipv 1 score cp -32 nodes 296597 nps 2879582 tbhits
 >>> chessEngine.ucinewgame()
 >>> chessEngine.setposition(['e2e4', 'e7e5', 'g1f3'])
 >>> move = chessEngine.bestmove()
->>> print move['move']
+>>> print move['bestmove']
 b8c6
 
 ```
