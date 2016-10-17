@@ -1,6 +1,8 @@
 Stockfishpy
 ===========
 
+|PyPI version|
+
 Python Stockfish UCI Chess Engine wrapper
 
 --------------
@@ -68,3 +70,6 @@ License:
 This project is licensed under the GPL3 see the LICENSE file for details
 
 .. _Download: http://www.stockfishchess.com/
+
+.. |PyPI version| image:: https://badge.fury.io/py/stockfishpy.svg
+   :target: https://badge.fury.io/py/stockfishpy
