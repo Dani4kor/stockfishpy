@@ -8,6 +8,8 @@ Python Stockfish UCI Chess Engine wrapper
 Getting Started:
 ----------------
 
+.. pip install stockfishpy
+
 -  Python 2.7
 -  `Download`_ and make ‘Stockfish’ executable
 -  Setup stockfish PATH in stockfishpy.py
