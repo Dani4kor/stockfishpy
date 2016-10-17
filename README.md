@@ -17,7 +17,7 @@ Python console Example
 ```python
 >>> from stockfishpy import *
 >>> chessEngine = Engine(STOCKFISH_PATH, param={'Threads': 2, 'Ponder': 'true'})
->>> print chessEngine.uciok()
+>>> print chessEngine.uci()
 uciok
 
 >>> print chessEngine.isready()

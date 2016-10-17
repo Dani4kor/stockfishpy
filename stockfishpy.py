@@ -75,7 +75,7 @@ class Engine(subprocess.Popen):
         for name, value in list(default_param.items()):
             self.setoption(name, value)
 
-        self.uciok()
+        self.uci()
         self.depth = str(depth)
 
     def send(self, command):
@@ -85,7 +85,7 @@ class Engine(subprocess.Popen):
     def flush(self):
         self.stdout.flush()
 
-    def uciok(self):
+    def uci(self):
         self.send('uci')
         while True:
             line = self.stdout.readline().strip()
