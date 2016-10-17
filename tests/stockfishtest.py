@@ -4,7 +4,7 @@
 """Unittests"""
 
 import unittest
-from stockfish.stockfishpy import *
+from stockfishpy.stockfishpy import *
 
 
 class test_stockfish(unittest.TestCase):
