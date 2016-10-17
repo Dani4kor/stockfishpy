@@ -45,7 +45,7 @@ class Engine(subprocess.Popen):
         }
 
     """
-    def __init__(self, engine_path="C:\\Users\\Dani\\Envs\\stockfish-python\\stockfishEngine\\stockfish-7-win\\Windows\\stockfish.exe", depth=12, param={}):
+    def __init__(self, engine_path="", depth=12, param={}):
         subprocess.Popen.__init__(self, engine_path, universal_newlines=True,
                                   stdin=subprocess.PIPE,
                                   stdout=subprocess.PIPE)
