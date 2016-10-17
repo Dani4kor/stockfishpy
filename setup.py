@@ -96,8 +96,8 @@ def find_package_data(
     return out
 
 
-PACKAGE = "stockfish"
-NAME = "stockfishpython"
+PACKAGE = "stockfishpy"
+NAME = "stockfishpy"
 DESCRIPTION = "Simple python Stockfish wrapper"
 AUTHOR = "dani4kor"
 AUTHOR_EMAIL = "dani4kor@gmail.com"
