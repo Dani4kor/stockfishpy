@@ -14,9 +14,10 @@ import subprocess
 import sys
 
 
+
 class Engine(subprocess.Popen):
     """
-    Initiates Stockfish Chess Engine with default param and depth = '12' requires stockfish path 
+    Initiates Stockfish Chess Engine with default param and depth = '12' requires stockfish PATH
 
     'param' & setoption function refers to https://github.com/iamjarret/pystockfish#details 
     'param' allows parameters to be specified by a dictionary object with 'Name' and 'value'
@@ -45,10 +46,15 @@ class Engine(subprocess.Popen):
         }
 
     """
-    def __init__(self, engine_path="", depth=12, param={}):
-        subprocess.Popen.__init__(self, engine_path, universal_newlines=True,
+    def __init__(self, stockfish_path='', depth=12, param={}):
+        try:
+            subprocess.Popen.__init__(self, stockfish_path, universal_newlines=True,
                                   stdin=subprocess.PIPE,
                                   stdout=subprocess.PIPE)
+        except Exception:
+            sys.exit('Install correct Stockfish PATH ')
+
+
 
         default_param = {
             "Write Debug Log": "false",
@@ -119,7 +125,8 @@ class Engine(subprocess.Popen):
             print '\nCheck position correctness\n'
             sys.exit(e.message)
 
-    def __listtostring(self, move):
+    @staticmethod
+    def __listtostring(move):
         return ' '.join(move).strip()
 
     def go(self):

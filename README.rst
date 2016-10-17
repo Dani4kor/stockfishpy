@@ -55,4 +55,4 @@ b8c6
 
 ---------
 ## License:
-This project is licensed under the GNU v3 see the LICENSE file for details
+This project is licensed under the GPL3 see the LICENSE file for details
