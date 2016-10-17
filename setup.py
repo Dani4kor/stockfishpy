@@ -97,7 +97,7 @@ def find_package_data(
 
 
 PACKAGE = "stockfish"
-NAME = "stockfish-python"
+NAME = "stockfishpython"
 DESCRIPTION = "Simple python Stockfish wrapper"
 AUTHOR = "dani4ko"
 AUTHOR_EMAIL = "dani4kor@gmail.com"
@@ -109,7 +109,7 @@ setup(
     name=NAME,
     version=VERSION,
     description=DESCRIPTION,
-    long_description=read("README.md"),
+    long_description=read("README.rst"),
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     license="GPLv3",
@@ -118,7 +118,7 @@ setup(
     package_data=find_package_data(PACKAGE, only_in_packages=False),
     classifiers=[
         "Programming Language :: Python",
-        "Development Status :: 3 - Alpha"
+        "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: GNU General Public License (GPL)",
         "Topic :: Software Development :: Libraries :: Python Modules",
