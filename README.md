@@ -10,7 +10,7 @@ USAGE:
 ------
 Python console Example
 ```python
-    from stockfishpy import *
+>>> from stockfishpy import *
 ```
 
 
