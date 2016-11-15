@@ -67,7 +67,7 @@ Tests:
 License:
 --------
 
-This project is licensed under the GPL3 see the LICENSE file for details
+This project is licensed under the GPLv3 see the LICENSE file for details
 
 .. _Download: http://www.stockfishchess.com/
 
