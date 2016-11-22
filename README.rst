@@ -1,7 +1,7 @@
 Stockfishpy
 ===========
 
-|PyPI version|
+
 
 Python Stockfish UCI Chess Engine wrapper
 
