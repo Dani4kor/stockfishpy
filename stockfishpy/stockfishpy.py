@@ -12,7 +12,7 @@
 
 import subprocess
 import sys
-
+import re
 
 
 class Engine(subprocess.Popen):
@@ -46,15 +46,14 @@ class Engine(subprocess.Popen):
         }
 
     """
+
     def __init__(self, stockfish_path='', depth=12, param={}):
         try:
             subprocess.Popen.__init__(self, stockfish_path, universal_newlines=True,
-                                  stdin=subprocess.PIPE,
-                                  stdout=subprocess.PIPE)
+                                      stdin=subprocess.PIPE,
+                                      stdout=subprocess.PIPE)
         except Exception:
             sys.exit('Install correct Stockfish PATH ')
-
-
 
         default_param = {
             "Write Debug Log": "false",
@@ -119,8 +118,12 @@ class Engine(subprocess.Popen):
                     self.__listtostring(position)))
                 self.isready()
             else:
-                self.send('position fen {}'.format(position))
-                self.isready()
+                if re.match('\s*([rnbqkpRNBQKP1-8]+\/){7}([rnbqkpRNBQKP1-8]+)\s[bw-]\s(([a-hkqA-HKQ]{1,4})|(-))\s(([a-h][36])|(-))\s\d+\s\d+\s*', position):
+                    self.send('position fen {}'.format(position))
+                    self.isready()
+                else:
+                    print "FEN doesnt match"
+
         except Exception as e:
             print '\nCheck position correctness\n'
             sys.exit(e.message)
