@@ -3,7 +3,7 @@
 
 """
     Simple Python Stockfish UCI wrapper
-    UCI chess engine http://www.stockfishchess.com/ 
+    UCI chess engine http://www.stockfishchess.com/
 
     :copyright: (c) 2016 by Dani Korniliev
     :license: GNU General Public License, see LICENSE for more details.
@@ -19,7 +19,7 @@ class Engine(subprocess.Popen):
     """
     Initiates Stockfish Chess Engine with default param and depth = '12' requires stockfish PATH
 
-    'param' & setoption function refers to https://github.com/iamjarret/pystockfish#details 
+    'param' & setoption function refers to https://github.com/iamjarret/pystockfish#details
     'param' allows parameters to be specified by a dictionary object with 'Name' and 'value'
     with value as an integer.
 
@@ -117,13 +117,9 @@ class Engine(subprocess.Popen):
                 self.send('position startpos moves {}'.format(
                     self.__listtostring(position)))
                 self.isready()
-            else:
-                if re.match('\s*([rnbqkpRNBQKP1-8]+\/){7}([rnbqkpRNBQKP1-8]+)\s[bw-]\s(([a-hkqA-HKQ]{1,4})|(-))\s(([a-h][36])|(-))\s\d+\s\d+\s*', position):
-                    self.send('position fen {}'.format(position))
-                    self.isready()
-                else:
-                    print "FEN doesnt match"
-
+            elif re.match('\s*([rnbqkpRNBQKP1-8]+\/){7}([rnbqkpRNBQKP1-8]+)\s[bw-]\s(([a-hkqA-HKQ]{1,4})|(-))\s(([a-h][36])|(-))\s\d+\s\d+\s*', position):
+                self.send('position fen {}'.format(position))
+                self.isready()
         except Exception as e:
             print '\nCheck position correctness\n'
             sys.exit(e.message)
