@@ -71,6 +71,6 @@ This project is licensed under the GPLv3 see the LICENSE file for details
 
 .. _Download: http://www.stockfishchess.com/
 
-.. |PyPI version| 
+.. |PyPI version| image:: https://badge.fury.io/py/stockfishpy.svg
     :target:  https://badge.fury.io/py/stockfishpy
     
