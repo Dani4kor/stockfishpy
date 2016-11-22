@@ -3,5 +3,5 @@
 
 
 __all__ = ['stockfishpy']
-__version__ = "0.1.dev6"
+__version__ = "1.0"
 
