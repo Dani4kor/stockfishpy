@@ -117,7 +117,7 @@ class Engine(subprocess.Popen):
                 self.send('position startpos moves {}'.format(
                     self.__listtostring(position)))
                 self.isready()
-            elif re.match('\s*^(((?:[rnbqkpRNBQKP1-8]+\/){7})[rnbqkpRNBQKP1-8]+)\s([b|w])\s([a-hkqA-HKQ]{1,4})\s(-|[a-h][1-8])\s(\d+\s\d+)$', position):
+            elif re.match('\s*^(((?:[rnbqkpRNBQKP1-8]+\/){7})[rnbqkpRNBQKP1-8]+)\s([b|w])\s([K|Q|k|q]{1,4})\s(-|[a-h][1-8])\s(\d+\s\d+)$', position):
                 self.send('position fen {}'.format(position))
                 self.isready()
         except Exception as e:
