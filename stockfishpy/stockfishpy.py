@@ -97,10 +97,6 @@ class Engine(subprocess.Popen):
             if line == 'uciok':
                 return line
 
-    
-
-
-
     def setoption(self, optionname, value):
         """ Update default_param dict """
         self.send('setoption name %s value %s' % (optionname, str(value)))
@@ -129,7 +125,7 @@ class Engine(subprocess.Popen):
 
                 for fenPart in fen:
                     field_sum = 0
-                    previous_was_digit, previous_was_piece = False,False
+                    previous_was_digit, previous_was_piece = False, False
 
                     for c in fenPart:
                         if c in ["1", "2", "3", "4", "5", "6", "7", "8"]:
@@ -141,7 +137,7 @@ class Engine(subprocess.Popen):
                         elif c == "~":
                             if not previous_was_piece:
                                 raise ValueError("~ not after piece in position part of fen: {0}".format(repr(fen)))
-                            previous_was_digit, previous_was_piece = False,False
+                            previous_was_digit, previous_was_piece = False, False
                         elif c.lower() in ["p", "n", "b", "r", "q", "k"]:
                             field_sum += 1
                             previous_was_digit = False
@@ -189,9 +185,3 @@ class Engine(subprocess.Popen):
                     ponder = None
                 return {'bestmove': line[1], 'ponder': ponder, 'info': ' '.join(info)}
             info = line
-
-
-
-
-
-
