@@ -156,7 +156,7 @@ class Engine(subprocess.Popen):
             else: raise ValueError("fen doesn`t match follow this example: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1 ")  
 
         except ValueError as e:
-            print '\nCheck position correctness\n'
+            print('\nCheck position correctness\n')
             sys.exit(e.message)
 
     @staticmethod
